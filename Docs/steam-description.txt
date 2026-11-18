@@ -1,0 +1,49 @@
+[b]All the Progression goodness, less research.[/b]
+
+[i]This is a fork of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3841674396]Progression: Water[/url] by ferny. Huge thanks to ferny for the original mod and all the Progression work this builds on. For a really good modpack, check out [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3521297585]The Progression Modpack[/url].[/i]
+
+[h2]Features[/h2]
+[list]
+[*]Spreads Dubs Bad Hygiene across the Neolithic, Medieval and Industrial eras, from pit latrines and water wells to pumping stations and hot tubs.
+[*]Re-costs and rewires Dubs Bad Hygiene's own research and buildings to fit that progression.
+[*]With Medieval Overhaul, merges its well into Dubs Bad Hygiene's and adds a medieval burn pit, cesspit, water barrel and hot water cistern.
+[/list]
+
+[h2]Why "LESS"?[/h2]
+Progression: Water adds up to [b]36 research projects[/b] depending on your mods. This fork cuts that to [b]at most 8[/b]:
+[list]
+[*][b]Primitive hygiene[/b] (Neolithic): latrine, burn pit, water well, water tub, bath mat, stall door, litter box, water trough and water bowl
+[*][b]Water supply[/b] (Medieval): wind pump, groundwater and surface water intakes, water butt, water tower, plumbing valve, and DBH Expanded's water tank
+[*][b]Basic fixtures[/b] (Medieval): basin, bathtub and sewage outlet
+[*][b]Showers[/b] (Industrial): shower and shower stall
+[*][b]Sinks and fountains[/b] (Industrial): kitchen sink and drinking fountain
+[*][b]Large water storage[/b] (Industrial): huge water tower, and DBH Expanded's large water tank and large hot water tank
+[*][b]Medieval burn pit[/b] and [b]Cesspit[/b] (Medieval, with Medieval Overhaul)
+[/list]
+Everything else unlocks with the research it already builds on:
+[list]
+[*]Hot water tank, and Medieval Overhaul's hot water cistern: [b]Log boilers[/b]
+[*]Chemfuel and electric boilers: Dubs Bad Hygiene's geothermal heating, now [b]Water heaters[/b]
+[*]Deep water well: Dubs Bad Hygiene's pumping station, now [b]Industrial water supply[/b]
+[*]Royal toilet and royal basin: DBH Expanded's [b]Royal fixtures[/b]
+[*]Solar water heater: [b]Fluid heat exchange[/b]
+[*]Medieval Overhaul's water barrel: [b]Water supply[/b]
+[*]With VFE Production/Farming - Dubs Bad Hygiene Patches, which removes Dubs Bad Hygiene's irrigation sprinkler, the empty Irrigation project goes and fire sprinklers need [b]Plumbing[/b] instead
+[/list]
+Everything stays in the same era, and still needs the other research it did before.
+
+[h2]Compatibility[/h2]
+Supports:
+[list]
+[*]Dubs Bad Hygiene (needed for any of this mod's research)
+[*][FM] DBH Addon: Expanded Pack
+[*]Medieval Overhaul
+[*]VFE Production/Farming - Dubs Bad Hygiene Patches
+[*]Vanilla Factions Expanded - Tribals
+[*]ProgressionLESS: Furniture and Progression: Furniture
+[*]ProgressionLESS: Temperature and Progression: Temperature
+[/list]
+
+[b]Replaces the original. Don't use both.[/b]
+
+[b]Switching mid-game isn't recommended.[/b] Many of the original's research projects are merged or removed, so swapping Progression: Water for this fork in an existing save can lose research progress. Start a new game when you switch.
