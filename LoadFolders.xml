@@ -6,6 +6,7 @@
     <li IfModActive="dubwise.dubsbadhygiene">Common/Mods and Shit/Dubs Bad Hygiene</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,farxmai2.dbh.expanded">Common/Mods and Shit/DBH Expanded</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,dankpyon.medieval.overhaul">Common/Mods and Shit/Medieval Overhaul</li>
+    <li IfModActiveAll="dubwise.dubsbadhygiene,cruesoe.progressionlessfurniture">Common/Mods and Shit/ProgressionLESS Furniture</li>
   </v1.6>
   <v1.7>
     <li>/</li>
@@ -13,5 +14,6 @@
     <li IfModActive="dubwise.dubsbadhygiene">Common/Mods and Shit/Dubs Bad Hygiene</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,farxmai2.dbh.expanded">Common/Mods and Shit/DBH Expanded</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,dankpyon.medieval.overhaul">Common/Mods and Shit/Medieval Overhaul</li>
+    <li IfModActiveAll="dubwise.dubsbadhygiene,cruesoe.progressionlessfurniture">Common/Mods and Shit/ProgressionLESS Furniture</li>
   </v1.7>
 </loadFolders>

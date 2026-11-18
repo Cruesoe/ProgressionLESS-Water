@@ -35,8 +35,10 @@ For a really good modpack, check out The Progression Modpack on the Steam Worksh
     <li>farxmai2.dbh.expanded</li>
     <li>dankpyon.medieval.overhaul</li>
     <li>ferny.progressiontemperature</li>
+    <li>cruesoe.progressionlesstemperature</li>
     <li>ferny.progressioncore</li>
     <li>ferny.progressionbionics</li>
+    <li>cruesoe.progressionlessbionics</li>
     <li>ferny.consistenttext</li>
   </loadAfter>
 </ModMetaData>

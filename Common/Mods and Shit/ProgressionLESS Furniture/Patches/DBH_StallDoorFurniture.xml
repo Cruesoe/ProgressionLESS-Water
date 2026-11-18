@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- ProgressionLESS: Furniture folds ferny's Door project into Carpentry -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ResearchProjectDef[defName="Ferny_StallDoor"]/prerequisites</xpath>
+    <value>
+      <prerequisites Inherit="False">
+        <li>Ferny_Column</li>
+      </prerequisites>
+    </value>
+  </Operation>
+</Patch>
