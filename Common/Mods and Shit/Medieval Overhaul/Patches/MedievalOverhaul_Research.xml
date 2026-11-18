@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="EEG_WaterTowerS"]/researchPrerequisites</xpath>
@@ -10,7 +10,7 @@
     <xpath>Defs/ThingDef[defName="EEG_WaterTowerS"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_MedievalWaterBarrel</li>
+        <li>Ferny_WindPump</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -38,7 +38,7 @@
     <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_MedievalHotWaterTank</li>
+        <li>LogBoilers</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -78,7 +78,7 @@
           <xpath>Defs/ThingDef[defName="DankPyon_BurnPit"]/researchPrerequisites</xpath>
           <value>
             <researchPrerequisites Inherit="False">
-              <li>Ferny_BurnPit</li>
+              <li>Ferny_Latrine</li>
             </researchPrerequisites>
           </value>
         </li>
@@ -104,14 +104,6 @@
     <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]/comps/li[@Class="DubCore.CompProperties_HeatStore"]/StoreCapacity</xpath>
     <value>
       <StoreCapacity>50</StoreCapacity>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ResearchProjectDef[defName="Ferny_HotWaterTank"]/prerequisites</xpath>
-    <value>
-      <prerequisites Inherit="False">
-        <li>Ferny_MedievalHotWaterTank</li>
-      </prerequisites>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">

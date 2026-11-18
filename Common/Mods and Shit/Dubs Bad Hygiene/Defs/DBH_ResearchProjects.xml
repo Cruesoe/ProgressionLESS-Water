@@ -1,324 +1,38 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_PlumbingValve</defName>
-    <label>Plumbing valve</label>
-    <description>Build a valve that opens or closes connections between pipes.</description>
-    <baseCost>100</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>10</researchViewX>
-    <researchViewY>2</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Plumbing</li>
-    </prerequisites>
-  </ResearchProjectDef>
   <ResearchProjectDef>
-    <defName>Ferny_PrimitiveWell</defName>
-    <label>Water well</label>
-    <description>Build a water well that provides groundwater for manual collection. Water can be hauled to tubs for washing or drinking.</description>
+    <defName>Ferny_Latrine</defName>
+    <label>primitive hygiene</label>
+    <description>Build the basics of hygiene without plumbing: pit latrines, burn pits for fecal sludge, water wells for manual collection, water tubs for washing and drinking, bath mats, stall doors, and litter boxes, troughs and bowls for animals.</description>
     <baseCost>150</baseCost>
     <techLevel>Neolithic</techLevel>
     <tab>DubsBadHygiene</tab>
     <researchViewX>10</researchViewX>
-    <researchViewY>3</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_WaterTub</defName>
-    <label>Water tub</label>
-    <description>Build a tub that holds water for personal hygiene. Must be regularly refilled with fresh water, also fills with rain water. Can also be used for drinking if thirst is enabled.</description>
-    <baseCost>100</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>10</researchViewX>
-    <researchViewY>6</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_StallDoor</defName>
-    <label>Stall door</label>
-    <description>Build a thin door that blocks line of sight to people using bathroom fixtures. Does not create new rooms or prevent heat loss.</description>
-    <baseCost>100</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>10</researchViewX>
-    <researchViewY>7</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_BathMat</defName>
-    <label>Bath Mat</label>
-    <description>Build a small mat used next to a bathtub to absorb water.</description>
-    <baseCost>100</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
-    <researchViewY>0</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHThirst="true">
-    <defName>Ferny_WaterTrough</defName>
-    <label>Water Trough</label>
-    <description>Build a trough that supplies water for animals. A service box with a ballcock valve automatically refills it when the water level is low, and rain also replenishes it.</description>
-    <baseCost>150</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
-    <researchViewY>1</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHThirst="true">
-    <defName>Ferny_PetWaterBowl</defName>
-    <label>Water Bowl</label>
-    <description>Build a bowl that holds drinking water for animals.</description>
-    <baseCost>100</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
-    <researchViewY>2</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_BurnPit</defName>
-    <label>Burn pit</label>
-    <description>Build a burn pit that eliminates fecal sludge by burning it as fuel. Can also be used for disposing of corpses or other detritus. Colonists may become sick if they spend too long near burning waste.</description>
-    <baseCost>150</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
-    <researchViewY>3</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Ferny_Latrine</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_WaterWell</defName>
-    <label>Groundwater intake</label>
-    <description>Build a groundwater intake that supplies groundwater to connected pumps. It cannot be operated manually. The presence of sewage or other pollution will reduce water quality and can cause contamination.</description>
-    <baseCost>200</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
     <researchViewY>4</researchViewY>
     <prerequisites Inherit="False">
-      <li>Plumbing</li>
-      <li>Ferny_PrimitiveWell</li>
+      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
     </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_WaterButt</defName>
-    <label>Water butt</label>
-    <description>Build a water butt that stores water for use by plumbed fixtures. Slowly fills when raining. The water must be drained if it becomes contaminated. Capacity: 100.</description>
-    <baseCost>100</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
-    <researchViewY>6</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Plumbing</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_WaterTower</defName>
-    <label>Water tower</label>
-    <description>Build a water tower that stores water for use by plumbed fixtures. The water must be drained if it becomes contaminated. Capacity: 8000.</description>
-    <baseCost>300</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
-    <researchViewY>7</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Ferny_WaterButt</li>
-    </prerequisites>
+    <tags>
+      <li>ClassicStart</li>
+    </tags>
   </ResearchProjectDef>
   <ResearchProjectDef DBHLite="true">
     <defName>Ferny_WindPump</defName>
-    <label>Wind pump</label>
-    <description>Build a wind pump that pumps water from wells to water towers. Pumping capacity: 3000 L/day.</description>
+    <label>water supply</label>
+    <description>Supply plumbed fixtures with water: wind pumps, groundwater and surface water intakes, water butts, tanks and towers, and valves that open or close connections between pipes. Stored water must be drained if it becomes contaminated.</description>
     <baseCost>300</baseCost>
     <techLevel>Medieval</techLevel>
     <tab>DubsBadHygiene</tab>
     <researchViewX>12</researchViewX>
     <researchViewY>0</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Plumbing</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_HugeWaterTower</defName>
-    <label>Huge water tower</label>
-    <description>Build a huge water tower that stores water for use by plumbed fixtures. The water must be drained if it becomes contaminated. Capacity: 50,000.</description>
-    <baseCost>500</baseCost>
-    <techLevel>Industrial</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>12</researchViewX>
-    <researchViewY>4</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Ferny_WaterTower</li>
-      <li>LargeWaterPumps</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_SimpleShower</defName>
-    <label>Shower</label>
-    <description>Build a shower that uses water supplied by water towers. Can be heated via plumbed hot water tanks. Does not require a sewage outlet.\n65L per wash</description>
-    <baseCost>150</baseCost>
-    <techLevel>Industrial</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>13</researchViewX>
-    <researchViewY>5</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Plumbing</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_Shower</defName>
-    <label>Shower stall</label>
-    <description>Build a shower stall that uses water supplied by water towers. Can be heated via plumbed hot water tanks. Does not require a sewage outlet.\n65L per wash</description>
-    <baseCost>150</baseCost>
-    <techLevel>Industrial</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>13</researchViewX>
-    <researchViewY>6</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Ferny_SimpleShower</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_DrinkingFountain</defName>
-    <label>Drinking fountain</label>
-    <description>Build a water fountain used for drinking and washing.</description>
-    <baseCost>200</baseCost>
-    <techLevel>Industrial</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>13</researchViewX>
-    <researchViewY>7</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Ferny_Basin</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_KitchenSink</defName>
-    <label>Kitchen sink</label>
-    <description>Build a kitchen sink that increases room cleanliness.</description>
-    <baseCost>200</baseCost>
-    <techLevel>Industrial</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>14</researchViewX>
-    <researchViewY>0</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Ferny_Basin</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_HotWaterTank</defName>
-    <label>Hot water tank</label>
-    <description>Build a hot water tank that stores hot running water for showers and baths. Connect to any boiler to heat.</description>
-    <baseCost>200</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>14</researchViewX>
-    <researchViewY>5</researchViewY>
-    <prerequisites Inherit="False">
-      <li>LogBoilers</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_SurfaceWaterIntake</defName>
-    <label>Surface water intake</label>
-    <description>Build a pipe laid into open fresh water, facing the water, which can be pumped by water pumps like a well. Rivers provide the most water, then lakes; marsh water provides the least and is stagnant, contaminating the water it is pumped into. Sea water can't be used.</description>
-    <baseCost>200</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>11</researchViewX>
-    <researchViewY>5</researchViewY>
-    <prerequisites Inherit="False">
-      <li>Plumbing</li>
-    </prerequisites>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_Latrine</defName>
-    <label>Latrine</label>
-    <description>Build a pit latrine that collects faeces in a hole in the ground. Must be emptied manually, or can be plumbed.\n14L per use</description>
-    <baseCost>150</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>10</researchViewX>
-    <researchViewY>4</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef>
-    <defName>Ferny_LitterBox</defName>
-    <label>Litter box</label>
-    <description>Build an indoor faeces and urine collection box for small animals.</description>
-    <baseCost>150</baseCost>
-    <techLevel>Neolithic</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>10</researchViewX>
-    <researchViewY>5</researchViewY>
-    <prerequisites Inherit="False">
-      <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-    </prerequisites>
-    <tags>
-      <li>ClassicStart</li>
-    </tags>
-  </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_SewageOutlet</defName>
-    <label>Sewage outlet</label>
-    <description>Build a sewage outlet that can be placed anywhere. Sewage will pool and spread on land or disperse in water. Sewage cleans up over time; the presence of trees, water, or rain will speed this up.</description>
-    <baseCost>100</baseCost>
-    <techLevel>Medieval</techLevel>
-    <tab>DubsBadHygiene</tab>
-    <researchViewX>12</researchViewX>
-    <researchViewY>5</researchViewY>
     <prerequisites Inherit="False">
       <li>Plumbing</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef>
     <defName>Ferny_Basin</defName>
-    <label>Basin</label>
-    <description>Build a bathroom basin that lets colonists wash their hands after using the toilet.</description>
+    <label>basic fixtures</label>
+    <description>Build basic plumbed fixtures: basins for washing hands after using the toilet, bathtubs for a comfortable, leisurely wash, and sewage outlets where sewage pools and slowly cleans up.</description>
     <baseCost>100</baseCost>
     <techLevel>Medieval</techLevel>
     <tab>DubsBadHygiene</tab>
@@ -329,43 +43,42 @@
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef>
-    <defName>Ferny_Bathtub</defName>
-    <label>Bathtub</label>
-    <description>Build a bathtub that provides a comfortable, leisurely wash. Can be heated by placing an adjacent campfire or log boiler, or via plumbed hot water tanks. Does not require a sewage outlet.\n190L per wash</description>
-    <baseCost>100</baseCost>
-    <techLevel>Medieval</techLevel>
+    <defName>Ferny_SimpleShower</defName>
+    <label>showers</label>
+    <description>Build showers and shower stalls that use water supplied by water towers. They can be heated via plumbed hot water tanks and do not require a sewage outlet.\n65L per wash</description>
+    <baseCost>150</baseCost>
+    <techLevel>Industrial</techLevel>
     <tab>DubsBadHygiene</tab>
     <researchViewX>13</researchViewX>
-    <researchViewY>3</researchViewY>
+    <researchViewY>5</researchViewY>
     <prerequisites Inherit="False">
       <li>Plumbing</li>
-      <li>Ferny_WaterTub</li>
     </prerequisites>
   </ResearchProjectDef>
-  <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_ChemfuelBoiler</defName>
-    <label>Chemfuel boiler</label>
-    <description>Build a chemfuel boiler that produces 2000 heating units for radiators and hot water tanks. Requires chemfuel for fuel. Can be controlled by thermostats.</description>
-    <baseCost>400</baseCost>
+  <ResearchProjectDef>
+    <defName>Ferny_KitchenSink</defName>
+    <label>sinks and fountains</label>
+    <description>Build kitchen sinks that increase room cleanliness and water fountains used for drinking and washing.</description>
+    <baseCost>200</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>DubsBadHygiene</tab>
     <researchViewX>14</researchViewX>
-    <researchViewY>6</researchViewY>
+    <researchViewY>0</researchViewY>
     <prerequisites Inherit="False">
-      <li>CentralHeating</li>
+      <li>Ferny_Basin</li>
     </prerequisites>
   </ResearchProjectDef>
   <ResearchProjectDef DBHLite="true">
-    <defName>Ferny_ElectricBoiler</defName>
-    <label>Electric boiler</label>
-    <description>Build an electric boiler that produces a variable amount of heating units for radiators and hot water tanks. Manually controlled power setting. Can be controlled by thermostats.</description>
-    <baseCost>400</baseCost>
+    <defName>Ferny_HugeWaterTower</defName>
+    <label>large water storage</label>
+    <description>Build large stores of water for plumbed fixtures: huge water towers and, with DBH Expanded, large water tanks and large hot water tanks. Stored water must be drained if it becomes contaminated.</description>
+    <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>DubsBadHygiene</tab>
-    <researchViewX>14</researchViewX>
-    <researchViewY>7</researchViewY>
+    <researchViewX>12</researchViewX>
+    <researchViewY>4</researchViewY>
     <prerequisites Inherit="False">
-      <li>CentralHeating</li>
+      <li>LargeWaterPumps</li>
     </prerequisites>
   </ResearchProjectDef>
 </Defs>

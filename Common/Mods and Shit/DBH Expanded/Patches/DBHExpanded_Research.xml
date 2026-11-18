@@ -1,17 +1,17 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/label</xpath>
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/label</xpath>
       <value>
-        <label>Royal bath</label>
+        <label>royal fixtures</label>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
       <value>
-        <label>Royal bath</label>
+        <label>royal fixtures</label>
       </value>
     </nomatch>
   </Operation>
@@ -20,13 +20,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/description</xpath>
       <value>
-        <description>Build a luxurious bath that provides a comfortable, leisurely wash and adds beauty to the room. Can be heated by placing an adjacent campfire or log boiler, or via plumbed hot water tanks. Does not require a sewage outlet.\n190L per wash</description>
+        <description>Build luxurious bathroom fixtures that provide high comfort and add beauty to the room: royal baths, royal basins and royal toilets.</description>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
       <value>
-        <description>Build a luxurious bath that provides a comfortable, leisurely wash and adds beauty to the room. Can be heated by placing an adjacent campfire or log boiler, or via plumbed hot water tanks. Does not require a sewage outlet.\n190L per wash</description>
+        <description>Build luxurious bathroom fixtures that provide high comfort and add beauty to the room: royal baths, royal basins and royal toilets.</description>
       </value>
     </nomatch>
   </Operation>
@@ -111,7 +111,7 @@
       <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/prerequisites</xpath>
       <value>
         <prerequisites Inherit="False">
-          <li>Ferny_Bathtub</li>
+          <li>Ferny_Basin</li>
         </prerequisites>
       </value>
     </match>
@@ -119,7 +119,7 @@
       <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
       <value>
         <prerequisites Inherit="False">
-          <li>Ferny_Bathtub</li>
+          <li>Ferny_Basin</li>
         </prerequisites>
       </value>
     </nomatch>
@@ -148,7 +148,8 @@
     <xpath>Defs/ThingDef[defName="RoyalToilet"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_RoyalToilet</li>
+        <li>RoyalFixtures</li>
+        <li>ModernFixtures</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -162,7 +163,8 @@
     <xpath>Defs/ThingDef[defName="RoyalBasin"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_RoyalBasin</li>
+        <li>RoyalFixtures</li>
+        <li>Ferny_Basin</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -176,7 +178,7 @@
     <xpath>Defs/ThingDef[defName="DBHA_SmallWaterTank"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_ExpandedWaterTank</li>
+        <li>Ferny_WindPump</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -190,7 +192,7 @@
     <xpath>Defs/ThingDef[defName="DBHA_WaterTank"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_ExpandedLargeWaterTank</li>
+        <li>Ferny_HugeWaterTower</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -204,7 +206,8 @@
     <xpath>Defs/ThingDef[defName="DBHA_HotWaterTank"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_ExpandedLargeHotWaterTank</li>
+        <li>Ferny_HugeWaterTower</li>
+        <li>LogBoilers</li>
       </researchPrerequisites>
     </value>
   </Operation>

@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="PrimitiveWell"]/thingClass</xpath>
@@ -130,20 +130,5 @@
     <value>
       <li>PrimitiveWell</li>
     </value>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="Ferny_PrimitiveWell"]/description</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="Ferny_PrimitiveWell"]/description</xpath>
-      <value>
-        <description>Build a water well that provides groundwater for manual collection. Haul water to tubs for washing and drinking, or use bills to gather filled waterskins. Nearby pollution can contaminate the groundwater.</description>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="Ferny_PrimitiveWell"]</xpath>
-      <value>
-        <description>Build a water well that provides groundwater for manual collection. Haul water to tubs for washing and drinking, or use bills to gather filled waterskins. Nearby pollution can contaminate the groundwater.</description>
-      </value>
-    </nomatch>
   </Operation>
 </Patch>

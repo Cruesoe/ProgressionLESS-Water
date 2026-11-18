@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <!-- ProgressionLESS: Furniture folds ferny's Door project into Carpentry -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>Defs/ResearchProjectDef[defName="Ferny_StallDoor"]/prerequisites</xpath>
+  <!-- ProgressionLESS: Furniture folds ferny's Door project into Carpentry; this folder loads before Dubs Bad Hygiene's, so it patches after it -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="ToiletStallDoor"]/researchPrerequisites</xpath>
     <value>
-      <prerequisites Inherit="False">
-        <li>Ferny_Column</li>
-      </prerequisites>
+      <li>Ferny_Column</li>
     </value>
   </Operation>
 </Patch>

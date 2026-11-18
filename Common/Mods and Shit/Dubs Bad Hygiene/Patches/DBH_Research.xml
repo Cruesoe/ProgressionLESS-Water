@@ -1,25 +1,9 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="Ferny_SolarWaterHeating"]</xpath>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs</xpath>
-      <value>
-        <ResearchProjectDef DBHLite="true">
-          <defName>Ferny_SolarWaterHeating</defName>
-          <label>Solar water heater</label>
-          <description>Build a solar water heater that uses sunlight to heat hot water tanks and radiators. 0-2000 units of heating power depending on light level and ambient temperature.</description>
-          <baseCost>600</baseCost>
-          <techLevel>Industrial</techLevel>
-          <tab>DubsBadHygiene</tab>
-          <researchViewX>15</researchViewX>
-          <researchViewY>4</researchViewY>
-          <prerequisites Inherit="False">
-            <li>CentralHeating</li>
-          </prerequisites>
-        </ResearchProjectDef>
-      </value>
-    </nomatch>
+  <!-- Deep water wells unlock with industrial water supply (LargeWaterPumps); the solar water heater with Fluid heat exchange (CentralHeating) -->
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="DeepWells" or defName="Ferny_SolarWaterHeating"]</xpath>
   </Operation>
   <Operation Class="PatchOperationConditional">
     <xpath>Defs/ResearchProjectDef[defName="Plumbing"]/label</xpath>
@@ -133,7 +117,7 @@
       <value>
         <prerequisites Inherit="False">
           <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-          <li>Ferny_PrimitiveWell</li>
+          <li>Ferny_Latrine</li>
         </prerequisites>
       </value>
     </match>
@@ -142,7 +126,7 @@
       <value>
         <prerequisites Inherit="False">
           <li MayRequire="oskarpotocki.vfe.tribals">VFET_Construction</li>
-          <li>Ferny_PrimitiveWell</li>
+          <li>Ferny_Latrine</li>
         </prerequisites>
       </value>
     </nomatch>
@@ -185,7 +169,7 @@
     <xpath>Defs/ThingDef[defName="plumbingValve"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_PlumbingValve</li>
+        <li>Ferny_WindPump</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -199,7 +183,7 @@
     <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_PrimitiveWell</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -227,7 +211,7 @@
     <xpath>Defs/ThingDef[defName="LitterBox"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_LitterBox</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -241,7 +225,7 @@
     <xpath>Defs/ThingDef[defName="WashBucket"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_WaterTub</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -255,7 +239,7 @@
     <xpath>Defs/ThingDef[defName="ToiletStallDoor"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_StallDoor</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -269,7 +253,7 @@
     <xpath>Defs/ThingDef[defName="BathMat"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_BathMat</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -283,7 +267,7 @@
     <xpath>Defs/ThingDef[defName="WaterTrough"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_WaterTrough</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -297,7 +281,7 @@
     <xpath>Defs/ThingDef[defName="PetWaterBowl"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_PetWaterBowl</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -311,7 +295,7 @@
     <xpath>Defs/ThingDef[defName="BurnPit"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_BurnPit</li>
+        <li>Ferny_Latrine</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -325,7 +309,7 @@
     <xpath>Defs/ThingDef[defName="WaterWellInlet"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_WaterWell</li>
+        <li>Ferny_WindPump</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -339,7 +323,7 @@
     <xpath>Defs/ThingDef[defName="WaterButt"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_WaterButt</li>
+        <li>Ferny_WindPump</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -353,7 +337,7 @@
     <xpath>Defs/ThingDef[defName="WaterTowerS"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_WaterTower</li>
+        <li>Ferny_WindPump</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -512,132 +496,6 @@
     </value>
   </Operation>
   <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/label</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/label</xpath>
-      <value>
-        <label>Deep water well</label>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <label>Deep water well</label>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/description</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/description</xpath>
-      <value>
-        <description>Build a deep water well that accesses a large area of ground water which can be pumped by water pumps. Deep wells are unaffected by pollution.</description>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <description>Build a deep water well that accesses a large area of ground water which can be pumped by water pumps. Deep wells are unaffected by pollution.</description>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/baseCost</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/baseCost</xpath>
-      <value>
-        <baseCost>2000</baseCost>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <baseCost>2000</baseCost>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/techLevel</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/techLevel</xpath>
-      <value>
-        <techLevel>Industrial</techLevel>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <techLevel>Industrial</techLevel>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/tab</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/tab</xpath>
-      <value>
-        <tab>DubsBadHygiene</tab>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <tab>DubsBadHygiene</tab>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/researchViewX</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/researchViewX</xpath>
-      <value>
-        <researchViewX>12</researchViewX>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <researchViewX>12</researchViewX>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/researchViewY</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/researchViewY</xpath>
-      <value>
-        <researchViewY>2</researchViewY>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <researchViewY>2</researchViewY>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
-    <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/prerequisites</xpath>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]/prerequisites</xpath>
-      <value>
-        <prerequisites Inherit="False">
-          <li>ElectricPumps</li>
-          <li>Ferny_WaterWell</li>
-        </prerequisites>
-      </value>
-    </match>
-    <nomatch Class="PatchOperationAdd">
-      <xpath>Defs/ResearchProjectDef[defName="DeepWells"]</xpath>
-      <value>
-        <prerequisites Inherit="False">
-          <li>ElectricPumps</li>
-          <li>Ferny_WaterWell</li>
-        </prerequisites>
-      </value>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationConditional">
     <xpath>Defs/ThingDef[defName="DeepWaterWellInlet"]/researchPrerequisites</xpath>
     <match Class="PatchOperationRemove">
       <xpath>Defs/ThingDef[defName="DeepWaterWellInlet"]/researchPrerequisites</xpath>
@@ -647,7 +505,7 @@
     <xpath>Defs/ThingDef[defName="DeepWaterWellInlet"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>DeepWells</li>
+        <li>LargeWaterPumps</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -656,13 +514,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="LargeWaterPumps"]/label</xpath>
       <value>
-        <label>Pumping station</label>
+        <label>industrial water supply</label>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="LargeWaterPumps"]</xpath>
       <value>
-        <label>Pumping station</label>
+        <label>industrial water supply</label>
       </value>
     </nomatch>
   </Operation>
@@ -671,13 +529,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="LargeWaterPumps"]/description</xpath>
       <value>
-        <description>Build a pumping station that pumps water from wells to water towers. Pumping capacity: 10000 L/day.</description>
+        <description>Build pumping stations that pump water from wells to water towers (10000 L/day), and deep water wells that reach clean water far below the surface.</description>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="LargeWaterPumps"]</xpath>
       <value>
-        <description>Build a pumping station that pumps water from wells to water towers. Pumping capacity: 10000 L/day.</description>
+        <description>Build pumping stations that pump water from wells to water towers (10000 L/day), and deep water wells that reach clean water far below the surface.</description>
       </value>
     </nomatch>
   </Operation>
@@ -686,13 +544,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="LargeWaterPumps"]/baseCost</xpath>
       <value>
-        <baseCost>1500</baseCost>
+        <baseCost>2000</baseCost>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="LargeWaterPumps"]</xpath>
       <value>
-        <baseCost>1500</baseCost>
+        <baseCost>2000</baseCost>
       </value>
     </nomatch>
   </Operation>
@@ -813,7 +671,7 @@
     <xpath>Defs/ThingDef[defName="SewageOutlet"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_SewageOutlet</li>
+        <li>Ferny_Basin</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -949,7 +807,7 @@
         <xpath>Defs/ResearchProjectDef[defName="SepticTanks"]/prerequisites</xpath>
         <value>
           <prerequisites Inherit="False">
-            <li>Ferny_SewageOutlet</li>
+            <li>Ferny_Basin</li>
           </prerequisites>
         </value>
       </match>
@@ -957,7 +815,7 @@
         <xpath>Defs/ResearchProjectDef[defName="SepticTanks"]</xpath>
         <value>
           <prerequisites Inherit="False">
-            <li>Ferny_SewageOutlet</li>
+            <li>Ferny_Basin</li>
           </prerequisites>
         </value>
       </nomatch>
@@ -1417,7 +1275,7 @@
     <xpath>Defs/ThingDef[defName="BathtubStuff"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_Bathtub</li>
+        <li>Ferny_Basin</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -1585,7 +1443,7 @@
     <xpath>Defs/ThingDef[defName="ShowerStuff"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_Shower</li>
+        <li>Ferny_SimpleShower</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -1599,7 +1457,7 @@
     <xpath>Defs/ThingDef[defName="Fountain"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_DrinkingFountain</li>
+        <li>Ferny_KitchenSink</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -1868,7 +1726,7 @@
       <xpath>Defs/ResearchProjectDef[defName="AdvancedShowers"]/prerequisites</xpath>
       <value>
         <prerequisites Inherit="False">
-          <li>Ferny_Shower</li>
+          <li>Ferny_SimpleShower</li>
           <li>ElectricPumps</li>
         </prerequisites>
       </value>
@@ -1877,7 +1735,7 @@
       <xpath>Defs/ResearchProjectDef[defName="AdvancedShowers"]</xpath>
       <value>
         <prerequisites Inherit="False">
-          <li>Ferny_Shower</li>
+          <li>Ferny_SimpleShower</li>
           <li>ElectricPumps</li>
         </prerequisites>
       </value>
@@ -2040,13 +1898,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="LogBoilers"]/label</xpath>
       <value>
-        <label>Log boiler</label>
+        <label>log boilers</label>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="LogBoilers"]</xpath>
       <value>
-        <label>Log boiler</label>
+        <label>log boilers</label>
       </value>
     </nomatch>
   </Operation>
@@ -2055,13 +1913,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="LogBoilers"]/description</xpath>
       <value>
-        <description>Build a log boiler that produces 2000 heating units for piped radiators and hot water tanks. Heats the room and adjacent baths. Requires wood logs for fuel.</description>
+        <description>Build log boilers that produce 2000 heating units for piped radiators and hot water tanks, and hot water tanks that store hot running water for showers and baths. A log boiler heats the room and adjacent baths, and requires wood logs for fuel.</description>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="LogBoilers"]</xpath>
       <value>
-        <description>Build a log boiler that produces 2000 heating units for piped radiators and hot water tanks. Heats the room and adjacent baths. Requires wood logs for fuel.</description>
+        <description>Build log boilers that produce 2000 heating units for piped radiators and hot water tanks, and hot water tanks that store hot running water for showers and baths. A log boiler heats the room and adjacent baths, and requires wood logs for fuel.</description>
       </value>
     </nomatch>
   </Operation>
@@ -2183,7 +2041,7 @@
     <xpath>Defs/ThingDef[defName="HotWaterTank"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_HotWaterTank</li>
+        <li>LogBoilers</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -2197,7 +2055,7 @@
     <xpath>Defs/ThingDef[defName="GasBoiler"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_ChemfuelBoiler</li>
+        <li>GeothermalHeating</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -2211,7 +2069,7 @@
     <xpath>Defs/ThingDef[defName="ElectricBoiler"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_ElectricBoiler</li>
+        <li>GeothermalHeating</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -2281,7 +2139,7 @@
     <xpath>Defs/ThingDef[defName="SolarHeater"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_SolarWaterHeating</li>
+        <li>CentralHeating</li>
       </researchPrerequisites>
     </value>
   </Operation>
@@ -2290,13 +2148,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="GeothermalHeating"]/label</xpath>
       <value>
-        <label>Geothermal water heater</label>
+        <label>water heaters</label>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="GeothermalHeating"]</xpath>
       <value>
-        <label>Geothermal water heater</label>
+        <label>water heaters</label>
       </value>
     </nomatch>
   </Operation>
@@ -2305,13 +2163,13 @@
     <match Class="PatchOperationReplace">
       <xpath>Defs/ResearchProjectDef[defName="GeothermalHeating"]/description</xpath>
       <value>
-        <description>Build a geothermal water heater that uses geothermal heat to heat hot water tanks and radiators. 7000 units of heating.</description>
+        <description>Build water heaters for hot water tanks and radiators: chemfuel boilers (2000 heating units), electric boilers with a manual power setting, and geothermal water heaters (7000 heating units). Boilers can be controlled by thermostats.</description>
       </value>
     </match>
     <nomatch Class="PatchOperationAdd">
       <xpath>Defs/ResearchProjectDef[defName="GeothermalHeating"]</xpath>
       <value>
-        <description>Build a geothermal water heater that uses geothermal heat to heat hot water tanks and radiators. 7000 units of heating.</description>
+        <description>Build water heaters for hot water tanks and radiators: chemfuel boilers (2000 heating units), electric boilers with a manual power setting, and geothermal water heaters (7000 heating units). Boilers can be controlled by thermostats.</description>
       </value>
     </nomatch>
   </Operation>
@@ -2554,6 +2412,7 @@
     </match>
   </Operation>
   <Operation Class="PatchOperationAdd">
+    <success>Always</success>
     <xpath>Defs/ThingDef[defName="IrrigationSprinkler"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
@@ -2949,7 +2808,7 @@
       <value>
         <prerequisites Inherit="False">
           <li>ElectricPumps</li>
-          <li>Ferny_Bathtub</li>
+          <li>Ferny_Basin</li>
         </prerequisites>
       </value>
     </match>
@@ -2958,7 +2817,7 @@
       <value>
         <prerequisites Inherit="False">
           <li>ElectricPumps</li>
-          <li>Ferny_Bathtub</li>
+          <li>Ferny_Basin</li>
         </prerequisites>
       </value>
     </nomatch>
@@ -3184,7 +3043,7 @@
     <xpath>Defs/ThingDef[defName="SurfaceWaterInlet"]</xpath>
     <value>
       <researchPrerequisites Inherit="False">
-        <li>Ferny_SurfaceWaterIntake</li>
+        <li>Ferny_WindPump</li>
       </researchPrerequisites>
     </value>
   </Operation>

@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <loadFolders>
+  <!-- Folders are patched from the last entry to the first: the ProgressionLESS Furniture and VFE Farming DBH Patches folders change what the Dubs Bad Hygiene folder sets, so they come before it -->
   <v1.6>
     <li>/</li>
     <li>Common</li>
+    <li IfModActiveAll="dubwise.dubsbadhygiene,cruesoe.progressionlessfurniture">Common/Mods and Shit/ProgressionLESS Furniture</li>
+    <li IfModActiveAll="dubwise.dubsbadhygiene,shavius.oreno.vfe.dubsbadhygiene">Common/Mods and Shit/VFE Farming DBH Patches</li>
     <li IfModActive="dubwise.dubsbadhygiene">Common/Mods and Shit/Dubs Bad Hygiene</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,farxmai2.dbh.expanded">Common/Mods and Shit/DBH Expanded</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,dankpyon.medieval.overhaul">Common/Mods and Shit/Medieval Overhaul</li>
-    <li IfModActiveAll="dubwise.dubsbadhygiene,cruesoe.progressionlessfurniture">Common/Mods and Shit/ProgressionLESS Furniture</li>
   </v1.6>
   <v1.7>
     <li>/</li>
     <li>Common</li>
+    <li IfModActiveAll="dubwise.dubsbadhygiene,cruesoe.progressionlessfurniture">Common/Mods and Shit/ProgressionLESS Furniture</li>
+    <li IfModActiveAll="dubwise.dubsbadhygiene,shavius.oreno.vfe.dubsbadhygiene">Common/Mods and Shit/VFE Farming DBH Patches</li>
     <li IfModActive="dubwise.dubsbadhygiene">Common/Mods and Shit/Dubs Bad Hygiene</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,farxmai2.dbh.expanded">Common/Mods and Shit/DBH Expanded</li>
     <li IfModActiveAll="dubwise.dubsbadhygiene,dankpyon.medieval.overhaul">Common/Mods and Shit/Medieval Overhaul</li>
-    <li IfModActiveAll="dubwise.dubsbadhygiene,cruesoe.progressionlessfurniture">Common/Mods and Shit/ProgressionLESS Furniture</li>
   </v1.7>
 </loadFolders>

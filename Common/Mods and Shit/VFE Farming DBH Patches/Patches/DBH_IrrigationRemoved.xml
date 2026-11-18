@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- VFE Production/Farming - Dubs Bad Hygiene Patches removes the irrigation sprinkler, leaving Irrigation empty: projects that needed it need Plumbing instead -->
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef/prerequisites/li[.="Irrigation"]</xpath>
+    <value>
+      <li>Plumbing</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="Irrigation"]</xpath>
+  </Operation>
+</Patch>

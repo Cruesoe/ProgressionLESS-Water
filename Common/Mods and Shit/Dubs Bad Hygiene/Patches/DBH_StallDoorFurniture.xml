@@ -1,15 +1,14 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
+  <!-- Runs after DBH_Research.xml, which sets the stall door's research -->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Progression: Furniture</li>
     </mods>
-    <match Class="PatchOperationReplace">
-      <xpath>Defs/ResearchProjectDef[defName="Ferny_StallDoor"]/prerequisites</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="ToiletStallDoor"]/researchPrerequisites</xpath>
       <value>
-        <prerequisites Inherit="False">
-          <li>Ferny_Door</li>
-        </prerequisites>
+        <li>Ferny_Door</li>
       </value>
     </match>
   </Operation>
