@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/label</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/label</xpath>
+      <value>
+        <label>Royal bath</label>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <label>Royal bath</label>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/description</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/description</xpath>
+      <value>
+        <description>Build a luxurious bath that provides a comfortable, leisurely wash and adds beauty to the room. Can be heated by placing an adjacent campfire or log boiler, or via plumbed hot water tanks. Does not require a sewage outlet.\n190L per wash</description>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <description>Build a luxurious bath that provides a comfortable, leisurely wash and adds beauty to the room. Can be heated by placing an adjacent campfire or log boiler, or via plumbed hot water tanks. Does not require a sewage outlet.\n190L per wash</description>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/baseCost</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/baseCost</xpath>
+      <value>
+        <baseCost>400</baseCost>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <baseCost>400</baseCost>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/techLevel</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/techLevel</xpath>
+      <value>
+        <techLevel>Industrial</techLevel>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <techLevel>Industrial</techLevel>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/tab</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/tab</xpath>
+      <value>
+        <tab>DubsBadHygiene</tab>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <tab>DubsBadHygiene</tab>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/researchViewX</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/researchViewX</xpath>
+      <value>
+        <researchViewX>17</researchViewX>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <researchViewX>17</researchViewX>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/researchViewY</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/researchViewY</xpath>
+      <value>
+        <researchViewY>3</researchViewY>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <researchViewY>3</researchViewY>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/prerequisites</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]/prerequisites</xpath>
+      <value>
+        <prerequisites Inherit="False">
+          <li>Ferny_Bathtub</li>
+        </prerequisites>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="RoyalFixtures"]</xpath>
+      <value>
+        <prerequisites Inherit="False">
+          <li>Ferny_Bathtub</li>
+        </prerequisites>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RoyalBath"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="RoyalBath"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RoyalBath"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>RoyalFixtures</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RoyalToilet"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="RoyalToilet"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RoyalToilet"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_RoyalToilet</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="RoyalBasin"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="RoyalBasin"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="RoyalBasin"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_RoyalBasin</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DBHA_SmallWaterTank"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="DBHA_SmallWaterTank"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DBHA_SmallWaterTank"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_ExpandedWaterTank</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DBHA_WaterTank"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="DBHA_WaterTank"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DBHA_WaterTank"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_ExpandedLargeWaterTank</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DBHA_HotWaterTank"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="DBHA_HotWaterTank"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DBHA_HotWaterTank"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_ExpandedLargeHotWaterTank</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+</Patch>

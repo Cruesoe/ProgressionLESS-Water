@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ReplaceLib.ReplacerDef MayRequire="ferny.replacelib">
+    <defName>Ferny_WaterWellReplacement</defName>
+    <replacers>
+      <li>
+        <replace>EGG_AdvancedWell</replace>
+        <with>PrimitiveWell</with>
+      </li>
+    </replacers>
+  </ReplaceLib.ReplacerDef>
+</Defs>

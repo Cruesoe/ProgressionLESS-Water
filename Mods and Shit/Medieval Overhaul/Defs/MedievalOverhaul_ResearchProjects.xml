@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ResearchProjectDef DBHLite="true">
+    <defName>Ferny_MedievalWaterBarrel</defName>
+    <label>Water barrel</label>
+    <description>Build a barrel for storing water.</description>
+    <baseCost>200</baseCost>
+    <techLevel>Medieval</techLevel>
+    <tab>DubsBadHygiene</tab>
+    <researchViewX>18</researchViewX>
+    <researchViewY>1</researchViewY>
+    <prerequisites Inherit="False">
+      <li>Plumbing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef DBHLite="true">
+    <defName>Ferny_MedievalHotWaterTank</defName>
+    <label>Hot water cistern</label>
+    <description>Build a stone cistern that stores hot water for showers and baths. Connect it to a boiler to heat the water. Holds half as much hot water as a standard hot water tank.</description>
+    <baseCost>200</baseCost>
+    <techLevel>Medieval</techLevel>
+    <tab>DubsBadHygiene</tab>
+    <researchViewX>18</researchViewX>
+    <researchViewY>4</researchViewY>
+    <prerequisites Inherit="False">
+      <li>LogBoilers</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef DBHLite="true">
+    <defName>Ferny_MedievalBurnPit</defName>
+    <label>Medieval burn pit</label>
+    <description>Build a medieval burn pit that eliminates fecal sludge by burning it as fuel. Can also be used for disposing of corpses or other detritus. Colonists may become sick if they spend too long near burning waste.</description>
+    <baseCost>150</baseCost>
+    <techLevel>Medieval</techLevel>
+    <tab>DubsBadHygiene</tab>
+    <researchViewX>18</researchViewX>
+    <researchViewY>5</researchViewY>
+    <prerequisites Inherit="False">
+      <li>Ferny_BurnPit</li>
+    </prerequisites>
+  </ResearchProjectDef>
+  <ResearchProjectDef DBHLite="true">
+    <defName>Ferny_MedievalSepticTank</defName>
+    <label>Cesspit</label>
+    <description>Build a stone-lined cesspit that collects sewage and slowly treats it. Holds 500 L and treats 50 L per day. When full, excess sewage is sent to sewage outlets.</description>
+    <baseCost>250</baseCost>
+    <techLevel>Medieval</techLevel>
+    <tab>DubsBadHygiene</tab>
+    <researchViewX>18</researchViewX>
+    <researchViewY>6</researchViewY>
+    <prerequisites Inherit="False">
+      <li>Ferny_SewageOutlet</li>
+    </prerequisites>
+  </ResearchProjectDef>
+</Defs>

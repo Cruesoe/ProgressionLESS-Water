@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ReplaceLib.ReplacerDef MayRequire="ferny.replacelib">
+    <defName>Ferny_LogBoilerReplacement</defName>
+    <replacers>
+      <li>
+        <replace>LogBoiler</replace>
+        <with>DankPyon_LogBoiler</with>
+      </li>
+    </replacers>
+  </ReplaceLib.ReplacerDef>
+</Defs>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Progression: Furniture</li>
+    </mods>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="Ferny_StallDoor"]/prerequisites</xpath>
+      <value>
+        <prerequisites Inherit="False">
+          <li>Ferny_Door</li>
+        </prerequisites>
+      </value>
+    </match>
+  </Operation>
+</Patch>

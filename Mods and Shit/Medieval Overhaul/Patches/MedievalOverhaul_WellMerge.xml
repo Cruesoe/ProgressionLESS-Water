@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/thingClass</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]/thingClass</xpath>
+      <value>
+        <thingClass>Building_WorkTable</thingClass>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+      <value>
+        <thingClass>Building_WorkTable</thingClass>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/graphicData</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]/graphicData</xpath>
+      <value>
+        <graphicData>
+          <texPath>Things/Building/Production/Well</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(3,3)</drawSize>
+          <drawRotated>false</drawRotated>
+        </graphicData>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+      <value>
+        <graphicData>
+          <texPath>Things/Building/Production/Well</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(3,3)</drawSize>
+          <drawRotated>false</drawRotated>
+        </graphicData>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/uiIconScale</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]/uiIconScale</xpath>
+      <value>
+        <uiIconScale>0.5</uiIconScale>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+      <value>
+        <uiIconScale>0.5</uiIconScale>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/inspectorTabs</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]/inspectorTabs</xpath>
+      <value>
+        <inspectorTabs>
+          <li>ITab_Bills</li>
+        </inspectorTabs>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+      <value>
+        <inspectorTabs>
+          <li>ITab_Bills</li>
+        </inspectorTabs>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/hasInteractionCell</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]/hasInteractionCell</xpath>
+      <value>
+        <hasInteractionCell>true</hasInteractionCell>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+      <value>
+        <hasInteractionCell>true</hasInteractionCell>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/interactionCellOffset</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]/interactionCellOffset</xpath>
+      <value>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+      <value>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/description</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]/description</xpath>
+      <value>
+        <description>A water well for manual water collection. Water can be hauled to tubs, or gathered into waterskins using bills. Nearby pollution can contaminate the groundwater.</description>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="PrimitiveWell"]</xpath>
+      <value>
+        <description>A water well for manual water collection. Water can be hauled to tubs, or gathered into waterskins using bills. Nearby pollution can contaminate the groundwater.</description>
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_Make_Water"]/recipeUsers/li[.="EGG_AdvancedWell"]</xpath>
+    <value>
+      <li>PrimitiveWell</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_Make_WaterBulk"]/recipeUsers/li[.="EGG_AdvancedWell"]</xpath>
+    <value>
+      <li>PrimitiveWell</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ResearchProjectDef[defName="Ferny_PrimitiveWell"]/description</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/ResearchProjectDef[defName="Ferny_PrimitiveWell"]/description</xpath>
+      <value>
+        <description>Build a water well that provides groundwater for manual collection. Haul water to tubs for washing and drinking, or use bills to gather filled waterskins. Nearby pollution can contaminate the groundwater.</description>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/ResearchProjectDef[defName="Ferny_PrimitiveWell"]</xpath>
+      <value>
+        <description>Build a water well that provides groundwater for manual collection. Haul water to tubs for washing and drinking, or use bills to gather filled waterskins. Nearby pollution can contaminate the groundwater.</description>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

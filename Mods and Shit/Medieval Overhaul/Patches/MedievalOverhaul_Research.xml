@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="EEG_WaterTowerS"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="EEG_WaterTowerS"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="EEG_WaterTowerS"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_MedievalWaterBarrel</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DankPyon_LogBoiler"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="DankPyon_LogBoiler"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DankPyon_LogBoiler"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>LogBoilers</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_MedievalHotWaterTank</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DankPyon_BurnPit"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="DankPyon_BurnPit"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DankPyon_BurnPit"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_MedievalBurnPit</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DankPyon_SewageSepticTank"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationRemove">
+      <xpath>Defs/ThingDef[defName="DankPyon_SewageSepticTank"]/researchPrerequisites</xpath>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="DankPyon_SewageSepticTank"]</xpath>
+    <value>
+      <researchPrerequisites Inherit="False">
+        <li>Ferny_MedievalSepticTank</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ReplaceLib.ReplacerDef/replacers/li[replace="BurnPit" and with="DankPyon_BurnPit"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="DankPyon_BurnPit"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites Inherit="False">
+              <li>Ferny_BurnPit</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ResearchProjectDef[defName="Ferny_MedievalBurnPit"]</xpath>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]/label</xpath>
+    <value>
+      <label>Hot water cistern</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]/description</xpath>
+    <value>
+      <description>Build a stone cistern that stores hot water for showers and baths. Connect it to a boiler to heat the water. Holds half as much hot water as a standard hot water tank.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]/comps/li[@Class="DubCore.CompProperties_HeatStore"]/StoreCapacity</xpath>
+    <value>
+      <StoreCapacity>50</StoreCapacity>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ResearchProjectDef[defName="Ferny_HotWaterTank"]/prerequisites</xpath>
+    <value>
+      <prerequisites Inherit="False">
+        <li>Ferny_MedievalHotWaterTank</li>
+      </prerequisites>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_SewageSepticTank"]/label</xpath>
+    <value>
+      <label>Cesspit</label>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_SewageSepticTank"]/description</xpath>
+    <value>
+      <description>Build a stone-lined cesspit that collects sewage and slowly treats it. Holds 500 L and treats 50 L per day. When full, excess sewage is sent to sewage outlets.</description>
+    </value>
+  </Operation>
+</Patch>
