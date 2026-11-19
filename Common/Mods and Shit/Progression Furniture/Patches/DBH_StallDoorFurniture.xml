@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- This folder loads before Dubs Bad Hygiene's, so it patches after it -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="ToiletStallDoor"]/researchPrerequisites</xpath>
+    <value>
+      <li>Ferny_Door</li>
+    </value>
+  </Operation>
+</Patch>

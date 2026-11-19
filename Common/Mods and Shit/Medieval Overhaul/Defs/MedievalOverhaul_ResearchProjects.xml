@@ -2,7 +2,7 @@
 <Defs>
   <ResearchProjectDef DBHLite="true">
     <defName>Ferny_MedievalBurnPit</defName>
-    <label>Medieval burn pit</label>
+    <label>medieval burn pit</label>
     <description>Build a medieval burn pit that eliminates fecal sludge by burning it as fuel. Can also be used for disposing of corpses or other detritus. Colonists may become sick if they spend too long near burning waste.</description>
     <baseCost>150</baseCost>
     <techLevel>Medieval</techLevel>
@@ -15,7 +15,7 @@
   </ResearchProjectDef>
   <ResearchProjectDef DBHLite="true">
     <defName>Ferny_MedievalSepticTank</defName>
-    <label>Cesspit</label>
+    <label>cesspit</label>
     <description>Build a stone-lined cesspit that collects sewage and slowly treats it. Holds 500 L and treats 50 L per day. When full, excess sewage is sent to sewage outlets.</description>
     <baseCost>250</baseCost>
     <techLevel>Medieval</techLevel>
