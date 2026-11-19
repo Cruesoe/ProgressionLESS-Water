@@ -91,7 +91,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="DankPyon_HotWaterTank"]/label</xpath>
     <value>
-      <label>Hot water cistern</label>
+      <label>hot water cistern</label>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
@@ -109,7 +109,7 @@
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ThingDef[defName="DankPyon_SewageSepticTank"]/label</xpath>
     <value>
-      <label>Cesspit</label>
+      <label>cesspit</label>
     </value>
   </Operation>
   <Operation Class="PatchOperationReplace">
