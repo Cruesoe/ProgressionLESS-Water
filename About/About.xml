@@ -21,7 +21,6 @@ For a really good modpack, check out The Progression Modpack on the Steam Worksh
   <modDependencies>
     <li>
       <packageId>ferny.replacelib</packageId>
-      <modVersion>261119</modVersion>
       <displayName>ReplaceLib</displayName>
       <steamWorkshopUrl>steam://url/CommunityFilePage/3417393194</steamWorkshopUrl>
     </li>
